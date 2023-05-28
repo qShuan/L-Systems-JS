@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="settings">
+            <div class="row">
+                <h2>Presets</h2>
+                <label for="presets">Presets</label>
+                <input id="presets" class="mdl-slider mdl-js-slider" type="range" min="0" max="2" value="0" onchange="onChange();">
+                </input>
+            </div> 
+            <div class="row">
+                <h2>Iterations</h2>
+                <label for="iterations">Iterations</label>
+                <input id="iterations" class="mdl-slider mdl-js-slider" type="range" min="1" max="5" value="3" onchange="onChange();">
+                </input>
+            </div>           
+            <div class="row">
+                <h2>Branches</h1>
+                <label for="branch-length">Branch Length</label>
+                <input id="branch-length" type="range" min="10" max="15" value="10" onchange="onChange();">
+                </input>
+                <label for="branch-width">Branch Width</label>
+                <input id="branch-width" type="range" min="1" max="8" value="2" step="0.1" onchange="onChange();">
+                </input>
+                <label for="branch-color">Branch Color</label>
+                <input id="branch-color" type="color" value="#431a00" onchange="onChange();">
+                </input>
+                <label for="branch-angle">Branch Angle</label>
+                <input id="branch-angle" type="range" min="5" max="90" value="25" step="0.1" onchange="onChange();">
+                </input>
+            </div>
+            <div class="row">
+                <h2>Leaves</h1>
+                <label for="leaf-length">Leaf Length</label>
+                <input id="leaf-length" type="range" min="2" max="12" value="6" step="0.1" onchange="onChange();">
+                </input>
+                <label for="leaf-width">Leaf Width</label>
+                <input id="leaf-width" type="range" min="1" max="8" value="3" step="0.1" onchange="onChange();">
+                </input>
+                <label for="leaf-color">Leaf Color</label>
+                <input id="leaf-color" type="color" value="#0d520d" onchange="onChange();">
+                </input>
+                <label for="leaf-alpha">Leaf Alpha</label>
+                <input id="leaf-alpha" type="range" min="0.01" max="1" value="0.8" step="0.01" onchange="onChange();">
+                </input>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    
+<script src="main.js"></script>
+</body>
+</html>
